@@ -1,6 +1,7 @@
 export { default as LandingPage } from './landingPage';
 
-// User Start
-export * as User from './user/user';
+export * as Admin from './admin/admin';
 
-// User End
+export * as Auth from './auth/auth';
+
+export * as User from './user/user';
