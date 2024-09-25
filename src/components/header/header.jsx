@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import DefaultHeader from "./defaultHeader";
 import UHeader from "./uHeader";
 import AHeader from "./aHeader";
@@ -17,10 +18,15 @@ const options = [
 
 const Header = () => {
     const location = useLocation();
+    const { i18n } = useTranslation();
     const [selected, setSelected] = useState(options[1]);
+    const handleSelectChange = (newValue) => {
+        setSelected(newValue);
+        i18n.changeLanguage(newValue.value);
+    };
 
     const props = {
-        langSelect: <Select.Select options={options} onchange={setSelected} value={selected} />
+        langSelect: <Select.Select options={options} onchange={handleSelectChange} value={selected} />
     }
 
     const renderHeader = () => {
