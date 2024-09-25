@@ -1,4 +1,12 @@
 {
+  "header": {
+    "nav": {
+      "home": "家",
+      "about": "关于",
+      "services": "服务",
+      "contact": "联系我们"
+    }
+  },
   "title": "React语言选择应用程序",
   "selectLanguage": "选择语言"
 }

@@ -25,6 +25,7 @@ import {
     PhoneIcon,
     PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const products = [
@@ -65,6 +66,7 @@ const callsToAction = [
 ];
 
 const DefaultHeader = (props) => {
+    const { t } = useTranslation();
     const { langSelect } = props;
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (
@@ -97,7 +99,7 @@ const DefaultHeader = (props) => {
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
                         <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                            Home
+                            {t('header.nav.home')}
                             <ChevronDownIcon
                                 aria-hidden="true"
                                 className="h-5 w-5 flex-none text-gray-400"
@@ -155,19 +157,19 @@ const DefaultHeader = (props) => {
                         to="about"
                         className="text-sm font-semibold leading-6 text-gray-900"
                     >
-                        About
+                        {t('header.nav.about')}
                     </Link>
                     <Link
                         to="services"
                         className="text-sm font-semibold leading-6 text-gray-900"
                     >
-                        Services
+                        {t('header.nav.services')}
                     </Link>
                     <Link
                         to="contact"
                         className="text-sm font-semibold leading-6 text-gray-900"
                     >
-                        Contact
+                        {t('header.nav.contact')}
                     </Link>
                 </PopoverGroup>
 

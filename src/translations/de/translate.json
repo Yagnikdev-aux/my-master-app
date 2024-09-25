@@ -1,4 +1,12 @@
 {
+  "header": {
+    "nav": {
+      "home": "heim",
+      "about": "um",
+      "services": "Dienstleistungen",
+      "contact": "Kontakt"
+    }
+  },
   "title": "React-Sprachauswahlanwendung",
   "selectLanguage": "Sprache auswählen"
 }

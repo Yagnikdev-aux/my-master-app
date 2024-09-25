@@ -1,4 +1,12 @@
 {
+    "header": {
+        "nav": {
+            "home": "ઘર",
+            "about": "વિશે",
+            "services": "સેવા",
+            "contact": "સંપર્ક"
+        }
+    },
     "title": "રિએક્ટ ભાષા પસંદગી એપ્લિકેશન",
     "selectLanguage": "ભાષા પસંદ કરો"
 }

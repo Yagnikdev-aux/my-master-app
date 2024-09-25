@@ -1,4 +1,12 @@
 {
+    "header": {
+        "nav": {
+            "home": "Accueil",
+            "about": "À propos",
+            "services": "Services",
+            "contact": "Contact"
+        }
+    },
     "title": "Application de Sélecteur de Langue React",
     "selectLanguage": "Sélectionnez une langue"
 }
