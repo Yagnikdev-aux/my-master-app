@@ -26,7 +26,6 @@ import {
     PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
-import { Select } from "../../components";
 
 const products = [
     {
@@ -65,10 +64,12 @@ const callsToAction = [
     { name: "Contact sales", to: "#", icon: PhoneIcon },
 ];
 
-const DefaultHeader = () => {
+const DefaultHeader = (props) => {
+    const { langSelect } = props;
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (
         <header className="bg-white">
+
             <nav
                 aria-label="Global"
                 className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
@@ -150,20 +151,32 @@ const DefaultHeader = () => {
                         </PopoverPanel>
                     </Popover>
 
-                    <Link to="about" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link
+                        to="about"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
                         About
                     </Link>
-                    <Link to="services" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link
+                        to="services"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
                         Services
                     </Link>
-                    <Link to="contact" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link
+                        to="contact"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
                         Contact
                     </Link>
                 </PopoverGroup>
 
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Select.Select />
-                    <Link to="#" className="text-sm font-semibold leading-6 text-gray-900">
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center ">
+                    {langSelect}
+                    <Link
+                        to="#"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
                         Log in <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>

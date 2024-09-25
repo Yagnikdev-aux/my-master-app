@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LandingPage, User } from "../pages";
 
-import Layout from "../layouts/layout";
+import { AppLayout } from "../layouts";
 
 const Root = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
+                <Route path="/" element={<AppLayout.AppLayout />}>
                     <Route index element={<LandingPage />} />
                     <Route path="about" element={<User.About />} />
                     <Route path="contact" element={<User.Contact />} />
